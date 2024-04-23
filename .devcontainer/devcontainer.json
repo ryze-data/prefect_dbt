@@ -1,0 +1,61 @@
+// DO BEFORE RUNNING ENV: switch [_insert_HOME_path] with the correct path before you build
+{
+	"name": "Prefect dbt Dev Container",
+	// if using image. I learned that you cannot use a docker base image with a devcontainer
+	// "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "prefectdevcontainer",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Mounts are used to bind local system folders required for dev container
+	// "mounts": [
+	// 	"source=[_insert_HOME_path]/.dbt,target=/home/vscode/.dbt,type=bind,consistency=cached"
+	// 	"source=[_insert_HOME_path]/.prefect,target=/home/vscode/.prefect,type=bind,consistency=cached"
+	// 	"source=${localWorkspaceFolder}/app-data,target=/data,type=bind,consistency=cached"
+	// ],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [4200,8080],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "uname -r && cat /etc/lsb-release && prefect version && dbt --version && cd dbt_projects/jaffle_shop/ && dbt debug" ,
+	
+	// Configure tool-specific properties.
+	// "customizations": {
+	// 	// Configure properties specific to VS Code.
+	// 	"vscode": {
+	// 		// Set *default* container specific settings.json values on container create.
+	// 		"settings": {
+	// 			"editor.formatOnSave": true,
+	// 			"files.insertFinalNewline": true,
+	// 			"[makefile]": {
+	// 				"editor.insertSpaces": false,
+	// 				"editor.detectIndentation": false
+	// 			}
+	// 		},
+	// 		// Add the IDs of extensions you want installed when the container is created.
+	// 		"extensions": [
+	// 			"hashicorp.terraform",
+	// 			"ms-vscode.makefile-tools"
+	// 		]
+	// 	}
+	// },
+	// "remoteEnv": {
+	// 	"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
+	// 	"LOCAL_USER_DIR": "${localEnv:HOME}${localEnv:USERPROFILE}",
+	// 	"LOCAL_USER": "${localEnv:USER}"
+	// },
+	// "features": {
+	// 	"docker-from-docker": "latest"
+	// },
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "vscode"
+	// , // "root
+	// "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode,type=bind",
+	// "workspaceFolder": "/home/vscode"
+	// "workspaceFolder": "${localWorkspaceFolder}"
+    }
