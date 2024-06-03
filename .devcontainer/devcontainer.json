@@ -12,14 +12,14 @@
 	// "features": {},
 
 	// Mounts are used to bind local system folders required for dev container
-	// "mounts": [
-	// 	"source=[_insert_HOME_path]/.dbt,target=/home/vscode/.dbt,type=bind,consistency=cached"
+	"mounts": [
+		"source=/Users/mattj/.dbt,target=/home/vscode/.dbt,type=bind,consistency=cached"
 	// 	"source=[_insert_HOME_path]/.prefect,target=/home/vscode/.prefect,type=bind,consistency=cached"
 	// 	"source=${localWorkspaceFolder}/app-data,target=/data,type=bind,consistency=cached"
-	// ],
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [4200,8080],
+	// "forwardPorts": [4200,8080,5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "uname -r && cat /etc/lsb-release && prefect version && dbt --version && cd dbt_projects/jaffle_shop/ && dbt debug" ,
