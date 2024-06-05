@@ -1,27 +1,38 @@
 {
     "recommendations": [
-        // important
+        // Important
         "ms-python.python",
         "innoverio.vscode-dbt-power-user",
         "charliemarsh.ruff",
-        "dorzey.vscode-sqlfluff"
+        "dorzey.vscode-sqlfluff",
 
         // Optional
-        // "hashicorp.terraform",
-        // "ms-vscode.makefile-tools",
+        "hediet.vscode-drawio",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
         // "Github.copilot-chat",
-        // "hediet.vscode-drawio",
-        // "eamodio.gitlens",
-        // "mhutchie.git-graph",
         // "Github.vscode-github-actions",
         // yaml formatter
+        "redhat.vscode-yaml",
         // toml formatter
+        "tamasfe.even-better-toml",
         //  jinja formattter
+        // "samuelcolvin.jinjahtml",
         // docker
+        "ms-azuretools.vscode-docker",
+        "JannisX11.bach-rename-extension",
+        // "ms-vscode.makefile-tools",
+        // infrastructure
+        // "hashicorp.terraform",
         // mongo
+        // "mongodb.mongodb-vscode",
         // snowflake
+        // "snowflake.snowflake-vsc",
         // "robertz.code-snapshot",
         // aws
+        "AmazonWebServices.aws-toolkit-vscode",
+        // "Boto3typed.boto3-ide",
         // azure
+        // "ms-vscode.vscode-node-azure-pack",
     ]
 }

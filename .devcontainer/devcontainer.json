@@ -74,7 +74,7 @@
 			"extensions": [
 				// important
 				"ms-python.python",
-				"innoverio.vscode-dbt-power-user",
+				// "innoverio.vscode-dbt-power-user",
 				"charliemarsh.ruff",
 				"dorzey.vscode-sqlfluff"
 
@@ -88,13 +88,14 @@
 				// "Github.vscode-github-actions",
 				// yaml formatter
 				// toml formatter
-				//  jinja formattter
-				// docker
+				// jinja formattter
+				// "ms-azuretools.vscode-docker",
 				// mongo
 				// snowflake
 				// "robertz.code-snapshot",
 			]
 		}
+	},
 	// },
 	// "remoteEnv": {
 	// 	"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
