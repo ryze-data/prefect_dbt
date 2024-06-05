@@ -25,24 +25,76 @@
 	"postCreateCommand": "uname -r && cat /etc/lsb-release && prefect version && dbt --version && cd dbt_projects/jaffle_shop/ && dbt debug" ,
 	
 	// Configure tool-specific properties.
-	// "customizations": {
+	"customizations": {
 	// 	// Configure properties specific to VS Code.
-	// 	"vscode": {
-	// 		// Set *default* container specific settings.json values on container create.
-	// 		"settings": {
-	// 			"editor.formatOnSave": true,
-	// 			"files.insertFinalNewline": true,
-	// 			"[makefile]": {
-	// 				"editor.insertSpaces": false,
-	// 				"editor.detectIndentation": false
-	// 			}
-	// 		},
-	// 		// Add the IDs of extensions you want installed when the container is created.
-	// 		"extensions": [
-	// 			"hashicorp.terraform",
-	// 			"ms-vscode.makefile-tools"
-	// 		]
-	// 	}
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				// # general settings
+				// "editor.formatOnSave": true,
+				// "editor.formatOnSaveMode": "file",
+		
+				// # Python
+				// "python.experiments.enabled": false,
+				// "python.defaultInterpreterPath": "./venv/bin/python",
+				"python.testing.unittestEnabled": false,
+				"python.testing.pytestEnabled": true,
+				"[python]": {
+					"editor.formatOnSave": true,
+					"editor.defaultFormatter": "charliermarsh.ruff",
+					"editor.codeActionsOnSave": {
+					"source.organizeImports": "explicit",
+				  }
+				},
+		
+				// Ruff
+				"ruff.format.args": ["--config=./ruff.toml"],
+				"ruff.lint.args": ["--config=./ruff.toml"],
+		
+				// # SQLfluff
+				"sqlfluff.dialect": "snowflake",
+				"sqlfluff.config": "./.sqlfluff",
+				// ## lint
+				// "sqlfluff.linter.arguments": [""],
+				"sqlfluff.linter.languages": [
+					"sql",
+					"jinja-sql",
+					"snowflake-sql"
+				],
+				"sqlfluff.linter.run": "onSave",
+				// ## format
+				// "sqlfluff.format.enabled": true,
+				// "sqlfluff.format.arguments": [""]
+				// "sqlfluff.experimental.format.executeInTerminal": true,
+				
+				// # static typing checker
+				// mypy-type-checker.path
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				// important
+				"ms-python.python",
+				"innoverio.vscode-dbt-power-user",
+				"charliemarsh.ruff",
+				"dorzey.vscode-sqlfluff"
+
+				// Optional
+				// "hashicorp.terraform",
+				// "ms-vscode.makefile-tools",
+				// "Github.copilot-chat",
+				// "hediet.vscode-drawio",
+				// "eamodio.gitlens",
+				// "mhutchie.git-graph",
+				// "Github.vscode-github-actions",
+				// yaml formatter
+				// toml formatter
+				//  jinja formattter
+				// docker
+				// mongo
+				// snowflake
+				// "robertz.code-snapshot",
+			]
+		}
 	// },
 	// "remoteEnv": {
 	// 	"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",

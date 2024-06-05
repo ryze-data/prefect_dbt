@@ -1,0 +1,26 @@
+{
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        }
+    },
+    // Ruff
+    "ruff.format.args": ["--config=./ruff.toml"],
+    "ruff.lint.args": ["--config=./ruff.toml"],
+
+    // # SQLfluff
+    "sqlfluff.dialect": "snowflake",
+    "sqlfluff.config": "./.sqlfluff",
+    // ## lint
+    // "sqlfluff.linter.arguments": [""],
+    "sqlfluff.linter.languages": [
+        "sql",
+        "jinja-sql",
+        "snowflake-sql"
+    ],
+    "sqlfluff.linter.run": "onSave",
+}

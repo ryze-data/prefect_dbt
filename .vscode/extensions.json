@@ -1,0 +1,27 @@
+{
+    "recommendations": [
+        // important
+        "ms-python.python",
+        "innoverio.vscode-dbt-power-user",
+        "charliemarsh.ruff",
+        "dorzey.vscode-sqlfluff"
+
+        // Optional
+        // "hashicorp.terraform",
+        // "ms-vscode.makefile-tools",
+        // "Github.copilot-chat",
+        // "hediet.vscode-drawio",
+        // "eamodio.gitlens",
+        // "mhutchie.git-graph",
+        // "Github.vscode-github-actions",
+        // yaml formatter
+        // toml formatter
+        //  jinja formattter
+        // docker
+        // mongo
+        // snowflake
+        // "robertz.code-snapshot",
+        // aws
+        // azure
+    ]
+}
