@@ -1,9 +1,9 @@
 select
-    expecteddeliverydate,
-    orderdate,
-    lastreceiptdate,
-    pol.lasteditedwhen,
-    validfrom,
+    expecteddeliverydate
+    ,orderdate
+    ,lastreceiptdate
+    ,pol.lasteditedwhen
+    ,validfrom
     validto
 from purchasing.purchaseorders as po
 inner join purchasing.purchaseorderlines as pol
