@@ -1,6 +1,9 @@
 # dbt
 # anonymous dbt usage tracker (cookie)
 .user.yml
+dbt_packages/
+logs/
+target/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
